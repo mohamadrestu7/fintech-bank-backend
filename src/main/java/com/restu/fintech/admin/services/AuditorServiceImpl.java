@@ -7,6 +7,7 @@ import com.restu.fintech.auth_users.repo.UserRepo;
 import com.restu.fintech.transaction.dtos.TransactionDTO;
 import com.restu.fintech.transaction.repo.TransactionRepo;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class AuditorServiceImpl implements AuditorService {
 
     private final UserRepo userRepo;
@@ -59,6 +61,7 @@ public class AuditorServiceImpl implements AuditorService {
 
     @Override
     public Optional<TransactionDTO> findTransactionById(Long transactionId) {
+        log.info("trx id = {}",transactionId);
         return transactionRepo.findById(transactionId)
                 .map(transaction -> modelMapper.map(transaction, TransactionDTO.class));
     }

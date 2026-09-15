@@ -17,4 +17,6 @@ public interface UserService {
     Response<?> updatePassword(UpdatePasswordRequest updatePasswordRequest);
 
     Response<?> uploadProfilePicture(MultipartFile multipartFile);
+
+    Response<?> uploadProfilePictureToS3(MultipartFile multipartFile);
 }
