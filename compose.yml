@@ -1,0 +1,9 @@
+service:
+  app:
+    build:
+      context: .
+    ports:
+      - "8090:8090"
+    restart: unless-stopped
+    env_file:
+      - .env
