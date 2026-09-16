@@ -22,18 +22,4 @@ public class FintechApplication {
 		SpringApplication.run(FintechApplication.class, args);
 	}
 
-//    @Bean
-//    CommandLineRunner runner() {
-//        return args -> {
-//            NotificationDTO notificationDTO = NotificationDTO.builder()
-//                    .recipient("mohamadrestuprajudi@gmail.com")
-//                    .subject("TEST EMAIL")
-//                    .body("CUMA TEST SEND EMAIL")
-//                    .type(NotificationType.EMAIL)
-//                    .build();
-//
-//            notificationService.sendEmail(notificationDTO, new User());
-//        };
-//    }
-
 }
