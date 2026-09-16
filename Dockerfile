@@ -23,6 +23,7 @@ WORKDIR /app
 # copy the final executable JAR file fro the 'builder' stage's target directory
 COPY --from=builder /app/target/*.jar app.jar
 
+# backend port
 EXPOSE 8090
 
 # define the command to run the application when the container start
