@@ -170,7 +170,7 @@ public class AuthServiceImpl implements AuthService {
         //send email reset link
         Map<String, Object> templateVariables = new HashMap<>();
         templateVariables.put("name", user.getFirstName());
-        templateVariables.put("resetLink", resetLink+ "=" +code);
+        templateVariables.put("resetLink", resetLink + code);
 
         NotificationDTO notificationDTO = NotificationDTO.builder()
                 .recipient(user.getEmail())
